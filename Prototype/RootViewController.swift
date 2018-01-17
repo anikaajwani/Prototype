@@ -10,6 +10,7 @@ import UIKit
 
 class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
+    @IBOutlet var pageControl: UIPageControl!
     var pageViewController: UIPageViewController?
 
 
@@ -17,7 +18,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         // Configure the page view controller and add it as a child view controller.
-        self.pageViewController = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
+        self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.pageViewController!.delegate = self
 
         let startingViewController: DataViewController = self.modelController.viewControllerAtIndex(0, storyboard: self.storyboard!)!
@@ -49,6 +50,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         // In more complex implementations, the model controller may be passed to the view controller.
         if _modelController == nil {
             _modelController = ModelController()
+            self.pageControl.numberOfPages = (_modelController?.pageData.count)!
         }
         return _modelController!
     }
@@ -85,6 +87,11 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
         return .mid
     }
 
-
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let currentViewController = self.pageViewController!.viewControllers![0] as! DataViewController
+        
+        let indexOfCurrentViewController = self.modelController.indexOfViewController(currentViewController)
+        self.pageControl.currentPage  = indexOfCurrentViewController
+    }
 }
 

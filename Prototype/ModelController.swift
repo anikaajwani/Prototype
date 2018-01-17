@@ -20,14 +20,15 @@ import UIKit
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
 
-    var pageData: [String] = []
+    var pageData: [PageData] = []
 
 
     override init() {
         super.init()
-        // Create the data model.
-        let dateFormatter = DateFormatter()
-        pageData = dateFormatter.monthSymbols
+        
+        pageData = [PageData.init(pageType: "spinner", question: "choose a college", answer: ""), PageData.init(pageType: "hopeItWorks", question: "What I like overall", answer: ""), PageData.init(pageType: "hopeItWorks2", question: "What I learned from the college website", answer: "") ]
+        
+        
     }
 
     func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> DataViewController? {
@@ -45,7 +46,9 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     func indexOfViewController(_ viewController: DataViewController) -> Int {
         // Return the index of the given data view controller.
         // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-        return pageData.index(of: viewController.dataObject) ?? NSNotFound
+        
+        //this is very bad!!
+        return pageData.index(of: viewController.dataObject!) ?? NSNotFound
     }
 
     // MARK: - Page View Controller Data Source

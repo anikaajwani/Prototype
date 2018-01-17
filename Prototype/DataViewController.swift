@@ -10,8 +10,10 @@ import UIKit
 
 class DataViewController: UIViewController {
 
+    @IBOutlet var answerTextField: UITextField!
+    
     @IBOutlet weak var dataLabel: UILabel!
-    var dataObject: String = ""
+    var dataObject: PageData?
 
 
     override func viewDidLoad() {
@@ -26,7 +28,9 @@ class DataViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.dataLabel!.text = dataObject
+        if let dataObject = dataObject{
+            self.dataLabel!.text = dataObject.question
+        }
     }
 
 

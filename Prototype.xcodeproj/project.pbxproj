@@ -15,6 +15,7 @@
 		F7255EC91FD638A4000BDBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7255EC81FD638A4000BDBE8 /* Assets.xcassets */; };
 		F7255ECC1FD638A4000BDBE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7255ECA1FD638A4000BDBE8 /* LaunchScreen.storyboard */; };
 		F7255ED71FD638A4000BDBE8 /* PrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7255ED61FD638A4000BDBE8 /* PrototypeTests.swift */; };
+		F7255EE21FD64AC8000BDBE8 /* PageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7255EE11FD64AC8000BDBE8 /* PageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		F7255ED21FD638A4000BDBE8 /* PrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7255ED61FD638A4000BDBE8 /* PrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrototypeTests.swift; sourceTree = "<group>"; };
 		F7255ED81FD638A4000BDBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7255EE11FD64AC8000BDBE8 /* PageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				F7255EC81FD638A4000BDBE8 /* Assets.xcassets */,
 				F7255ECA1FD638A4000BDBE8 /* LaunchScreen.storyboard */,
 				F7255ECD1FD638A4000BDBE8 /* Info.plist */,
+				F7255EE11FD64AC8000BDBE8 /* PageData.swift */,
 			);
 			path = Prototype;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7255EE21FD64AC8000BDBE8 /* PageData.swift in Sources */,
 				F7255EC01FD638A4000BDBE8 /* RootViewController.swift in Sources */,
 				F7255EC41FD638A4000BDBE8 /* ModelController.swift in Sources */,
 				F7255EC21FD638A4000BDBE8 /* DataViewController.swift in Sources */,
@@ -362,6 +366,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62PD5J9ZDZ;
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.introapp.Prototype;
@@ -376,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62PD5J9ZDZ;
 				INFOPLIST_FILE = Prototype/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.introapp.Prototype;
